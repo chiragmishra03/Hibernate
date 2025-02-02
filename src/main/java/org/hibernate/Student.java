@@ -1,4 +1,4 @@
-package org.example;
+package org.hibernate;
 
 
 import jakarta.persistence.*;
@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -27,8 +28,8 @@ public class Student {
     @Column(name = "student_age")
     private int sAge;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private LocalDate createdAt;
+    @Temporal(TemporalType.DATE)
+    private Date createdAt;
 
     @Lob
     private byte[] image;
